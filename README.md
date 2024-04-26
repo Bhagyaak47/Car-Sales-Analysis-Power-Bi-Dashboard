@@ -63,4 +63,4 @@ The dashboard should provide real-time insights into key performance indicators 
 - SUV's Lead the market at 99.9M in sales.
 - White the preffered colour,contributes $174.5M in Sales.
 - Greenville dealers shine with $70M+ in sales.
-- Chevrolet leads in both units sold and total sales.
+- Chevrolet comapny leads in both units sold and total sales.
