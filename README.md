@@ -24,7 +24,7 @@ The dashboard should provide real-time insights into key performance indicators 
 - Month = FORMAT('Calendar Table'[Date],"MMMM")
 - Week = WEEKNUM('Calendar Table[Date]')
 
-# 1.	Sales Overview:
+  1.Sales Overview:
 - YTD Total Sales = TOTALYTD(SUM(car_data[Price ($)]),'Calendar Table[Date]')
 - PYTD Total Sales = CALCULATE(SUM(car_data[Price ($)]),SAMEPERIODLASTYEAR('Calendar Table[Date]')
 - Sales Difference = [YTD Total Sales] - [PYTD Total Sales]
@@ -33,7 +33,7 @@ The dashboard should provide real-time insights into key performance indicators 
 - MTD Total Sales = TOTALMTD(SUM(car_data[Price ($)]),'Calendar Table'[Date])
 - MTD KPI = CONCATENATE("MTD Total Sales : ",FORMAT([MTD Total Sales]/1000000,"$0.00M"))
 
-# 2.	Average Price Analysis:
+  2.Average Price Analysis:
 - Avg Price = SUM(car_data[Price ($)])/ COUNT(car_data[Car_id])
 - YTD Avg Price = TOTALYTD([Avg Price],'Calendar Table'[Date])
 - PYTD Avg Price = CALCULATE([Avg Price],SAMEPERIODLASTYEAR('Calendar Table'[Date]))
@@ -43,7 +43,7 @@ The dashboard should provide real-time insights into key performance indicators 
 - MTD Avg Price = TOTALMTD([Avg Price],'Calendar Table'[Date])
 - MTD Avg Price KPI = CONCATENATE("MTD Avg Price : ",FORMAT([MTD Avg Price] / 1000,"$0.00K")
 
-# 3.	Cars Sold Metrics:
+  3.Cars Sold Metrics:
 - YTD Cars Sold = TOTALYTD(COUNT(car_data[Car_id]),'Calendar Table'[Date])
 - PYTD Cars Sold = CALCULATE(COUNT(car_data[Car_id]), SAMEPERIODLASTYEAR'Calendar Table'[Date]))
 - Cars Sold Diff = [YTD Cars Sold] - [PYTD Cars Sold]
@@ -55,4 +55,12 @@ The dashboard should provide real-time insights into key performance indicators 
 - Max Point on Area Chart = IF(MAXX(ALLSELECTED('Calendar Table'[Week],[Total Sales]) =
     [Total Sales],MAXX(ALLSELECTED('Calendar Table'[Week],[Total Sales]),BLANK()
   
+![car sales Dasboard_001](https://github.com/Bhagyaak47/Car-Sales-Analysis-Power-Bi-Dashboard/assets/152842490/10bc1861-eb36-4eee-bd63-837d93f05bdb)
+![car sales Dasboard_002](https://github.com/Bhagyaak47/Car-Sales-Analysis-Power-Bi-Dashboard/assets/152842490/49492e51-6b53-41c6-a362-80c437d9a41d)
 
+# Insights :
+
+- SUV's Lead the market at 99.9M in sales.
+- White the preffered colour,contributes $174.5M in Sales.
+- Greenville dealers shine with $70M+ in sales.
+- Chevrolet leads in both units sold and total sales.
